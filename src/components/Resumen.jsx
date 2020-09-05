@@ -13,6 +13,9 @@ const ContenedorResumen = styled.div`
 const Resumen = ({ datos }) => {
   // extraer datos
   const { marca, year, plan } = datos;
+
+  if (marca === "" || year === "" || plan === "") return null;
+
   return (
     <ContenedorResumen>
       <h2>Resumen de cotizacion</h2>
