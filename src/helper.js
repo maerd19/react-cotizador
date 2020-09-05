@@ -27,4 +27,4 @@ export const obtenerPlan = (plan) => (plan === "basico" ? 1.2 : 1.5);
 
 // Muestra la primer letra mayuscula
 export const primerMayuscula = (texto) =>
-  `${texto.charAt(0).toUpperCase()} ${texto.slice(1)}`;
+  `${texto.charAt(0).toUpperCase()}${texto.slice(1)}`;
