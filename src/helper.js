@@ -24,3 +24,7 @@ export const calcularMarca = (marca) => {
 
 // Calcular el tipo de seguro
 export const obtenerPlan = (plan) => (plan === "basico" ? 1.2 : 1.5);
+
+// Muestra la primer letra mayuscula
+export const primerMayuscula = (texto) =>
+  `${texto.charAt(0).toUpperCase()} ${texto.slice(1)}`;

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Formulario from "./components/Formulario";
+import Resumen from "./components/Resumen";
 
 import styled from "@emotion/styled";
 
@@ -15,12 +16,19 @@ const ContenedorFormulario = styled.div`
 `;
 
 function App() {
+  // Definit State
+  const [resumen, setResumen] = useState({});
+
+  const { datos } = resumen;
+
   return (
     <Contenedor>
       <Header titulo="Cotizador de seguros" />
 
       <ContenedorFormulario>
-        <Formulario />
+        <Formulario setResumen={setResumen} />
+
+        {datos ? <Resumen datos={datos} /> : null}
       </ContenedorFormulario>
     </Contenedor>
   );
